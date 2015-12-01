@@ -1,0 +1,81 @@
+/*  CSS by Henrique Carvalho */
+@import url(https://fonts.googleapis.com/css?family=Roboto:700,300);
+
+body{
+    margin: 0;
+    font-family: "Roboto", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+a{
+    text-decoration: none;
+}
+figure {
+	margin: 1%;
+	position: relative;
+    background-color: #000;
+    color: #fff;
+    width: 300px;
+    height: 250px;
+    display: inline-block;
+    overflow: hidden;
+}
+figcaption {
+    top: 0;
+    left: 0;
+    height: 100%;
+	width: 100%;
+	opacity: 0;
+	padding: 20px;
+	color: white;
+    text-transform: uppercase;
+    position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.8s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.8s;
+    transition: transform 0.4s, opacity 0.8s;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+figcaption h3{
+    margin: 0;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+}
+figure img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    -webkit-transition: -webkit-transform 1.5s;
+	-moz-transition: -moz-transform 1.5s;
+	transition: transform 1.5s;
+}
+figure:hover img{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+}
+figure:hover figcaption
+{
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.8s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.8s;
+    transition: transform 0.4s, opacity 0.8s;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    position: relative;
+}
+.row {
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+    text-align: center;
+}

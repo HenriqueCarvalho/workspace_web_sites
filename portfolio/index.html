@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HTML by Henrique Carvalho -->
+    <title>Henrique Carvalho</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <input type="checkbox" id="menuTrigger">
+    <nav class="menu">
+      <label for="menuTrigger" class="trigger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+      <ul class="links">
+        <li class="link"><a href="#home">Home</a></li>
+        <li class="link"><a href="#about">About Me</a></li>
+        <li class="link"><a href="#portfolio">Portfolio</a></li>
+        <li class="link"><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="apresentation">
+    <div id="title">
+        <div id="message"></div>
+        <div class="dash"></div>
+    </div>
+  </section>
+
+  <section id="home">
+    <div class="content">
+      <!--<div id="title">
+        <h2>
+          <div id="my-name"></div>
+          <div class="dash"></div>
+        </h2>
+      </div>-->
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="content">
+      <h1>About me</h1>
+      <div class="avatar">
+        <img class="boxShadow" src="img/avatar.jpg" alt="Henrique Carvalho">
+      </div>
+      <p>
+        I am 22 years old and I am developer living in Teresina, PI, Brazil. 
+        This is my personal portfolio. 
+        The main focus of the site is to showcase my recent work and keep it as updated as possible. 
+        I specialize in front-end ( Mobile and Website Design ) and back-end (C, C++, C#, Objective-C, Java, PHP, and Ruby on Rails).
+        I use the latest techniques to create a friendly website and mobile application.
+      </p>
+    </div> 
+  </section>
+
+  <section id="portfolio">
+    <div class="content">
+      <h1>Portfolio</h1>
+      <div class="row">
+        
+        <figure class="two-column animated">
+          <a href="http://henriquecarvalho.me/web_sites/theticket/">
+            <img src="img/the-ticket.jpg" alt="The Ticket">
+            <figcaption>
+              <h2><b>THE Ticket</b></h2>
+              <p class="date">February 2014</p>
+              <p>My interface project.</p>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="two-column animated">
+          <a href="https://github.com/HenriqueCarvalho?tab=repositories">
+            <img src="img/stop-the-jumpers.jpg" alt="Stop the Jumpers">
+            <figcaption>
+              <h2><b>Stop the Jumpers</b></h2>
+              <p class="date">April 2015</p>
+              <p>My final app project.</p>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="two-column animated">
+          <a href="http://henriquecarvalho.me#portfolio">
+            <img src="img/mix-and-match.jpg" alt="Mix and Match">
+            <figcaption>
+              <h2><b>Mix and Match</b></h2>
+              <p class="date">Coming Soon</p>
+              <p>My intership app.</p>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="two-column animated">
+          <a href="http://henriquecarvalho.me#portfolio">
+            <img src="img/coming-soon.jpg" alt="Coming soon">
+            <figcaption>
+              <h2><b>Next</b></h2>
+              <p class="date">Coming Soon</p>
+              <p>This space is reserved for my future employer.</p>
+            </figcaption>
+          </a>
+        </figure>
+
+      </div>
+    </div>   
+  </section>
+
+  <section id="contact">
+    <div class="content">
+      <h1>Contact Me</h1>
+      <div class="contact-content">
+
+        <form action="http://www.imgd.ca/formprocess.php" method="post" id="register">
+          <div class="name">
+            <input class="boxShadow" style="border:none;" type="text" name="name" id="name" placeholder="Name *" required="">
+          </div>
+          <div class="phone">
+            <input class="boxShadow" style="border:none;" type="tel" name="phone" id="phone" placeholder="Phone">
+          </div>
+          <div class="subject">
+            <input class="boxShadow" style="border:none;" type="text" name="subject" id="subject" placeholder="Subject *" required="">
+          </div>
+          <div class="email">
+            <input class="boxShadow" style="border:none;" type="email" name="email" id="email" placeholder="Email *" required="">
+          </div>
+          <div class="message">
+            <textarea class="boxShadow" style="border:none;" id="message" name="message" placeholder="Message *" required=""></textarea>
+            <label id="counter"></label>
+          </div>
+
+          <input type="submit" value="Submit" class="submit">
+        </form>     
+
+      </div> 
+    </div>
+  </section>
+
+  <div id="division-two">&nbsp;</div>
+
+  <footer>
+    <div class="footer-content">
+      <p>Copyright © 2014 Henrique Carvalho. All right reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/myjs.js"></script>
+  </div>
+</body>
+</html>

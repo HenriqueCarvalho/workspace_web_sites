@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400);
+
+body{
+  font-family: "Roboto Draft", "Roboto", sans-serif;
+  background: #FF5722;
+}
+
+.trigger {
+  position: absolute;
+  z-index: 0;
+  top: 10px;
+  left: 10px;
+  height: 56px;
+  width: 56px;
+  border-radius: 30%;
+  cursor: pointer;
+}
+
+.trigger:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 340px;
+  width: 170px;
+}
+
+#menuTrigger:checked ~ .menu .link{
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.menu .links {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  color: white;
+  margin: 76px 0 0 0;
+  padding: 0;
+}
+.menu .link {
+  font-size: 16px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+}
+.menu .link a {
+  display: block;
+  color: currentcolor;
+  padding: 10px;
+  text-decoration: none;
+}
+.menu .link a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.menu .trigger {
+  position: absolute;
+  z-index: 0;
+  top: 10px;
+  left: 10px;
+  height: 56px;
+  width: 56px;
+  border-radius: 100%;
+  cursor: pointer;
+  pointer-events: auto;
+  -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+  -webkit-transition-property: -webkit-transform, box-shadow;
+          transition-property: transform, box-shadow;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  box-shadow: 0 0 0 0px #424242;
+}
+.menu .trigger:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: box-shadow 0.2s 0.4s ease-in-out;
+          transition: box-shadow 0.2s 0.4s ease-in-out;
+  box-shadow: 0 0 0 28px #424242 inset, 0 0 0 28px #FF5722 inset;
+}
+#menuTrigger:checked ~ .menu .trigger {
+  box-shadow: 0 0 0 200px #424242, 0 0 0 202px white;
+}
+#menuTrigger:checked ~ .menu .trigger:before {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  box-shadow: 0 0 0 0 #424242 inset, 0 0 0 28px #FF5722 inset;
+}
+#menuTrigger:checked ~ .menu .trigger .line:nth-child(1) {
+  -webkit-transform: translateY(0) translate3d(-50%, -50%, 0);
+          transform: translateY(0) translate3d(-50%, -50%, 0);
+}
+#menuTrigger:checked ~ .menu .trigger .line:nth-child(3) {
+  -webkit-transform: translateY(0) translate3d(-50%, -50%, 0);
+          transform: translateY(0) translate3d(-50%, -50%, 0);
+}
+/* lines animation */
+.menu .trigger .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: white;
+  height: 2px;
+  width: 18.66667px;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out;
+}
+.menu .trigger .line:nth-child(1) {
+  -webkit-transform: translateY(-5px) translate3d(-50%, -50%, 0);
+          transform: translateY(-5px) translate3d(-50%, -50%, 0);
+}
+.menu .trigger .line:nth-child(3) {
+  -webkit-transform: translateY(5px) translate3d(-50%, -50%, 0);
+          transform: translateY(5px) translate3d(-50%, -50%, 0);
+}
+#menuTrigger {
+  position: fixed;
+  top: 0;
+  left: -20px;
+}
+
+/*Smartphone*/
+@media only screen and (max-width : 480px) {
+  .menu{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  .menu .trigger{
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .menu .links{
+    width: 100%;
+  }
+  #menuTrigger:checked ~ .menu .trigger {
+    box-shadow: 0 0 0 900px #424242, 0 0 0 902px white;
+  }
+}

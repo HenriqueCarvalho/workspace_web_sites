@@ -1,0 +1,176 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  background: #7E8F7C;
+}
+body, html{
+  height: 100%;
+}
+.right{
+  float: right;
+}
+.left{
+  float: left;
+}
+.text-center{
+  text-align: center;
+}
+.fa-facebook{
+  color: #3b5998;
+}
+.social{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 840px;
+  transform: translate(-50%, -50%);
+}
+.social > a{
+  position: relative;
+  display: inline;
+  margin: 40px;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+a:hover .front{
+  margin-top: -45px;
+}
+.fb:hover .front{
+  margin-left: -45px;
+}
+.ig:hover .front{
+  margin-left: 45px;
+} 
+.front{
+  position: absolute;
+  z-index: 10;
+  width: 200px;
+  height: 200px;
+  border-radius: 3px;
+  background: white;
+  transition: all .3s ease;
+}
+.front .fa{
+  display: block;
+  margin: 80px 0 30px 0;
+  font-size: 32px;
+}
+.front span{
+  color: #ccc;
+}
+.behind{
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  left: 5px;
+  width: 190px;
+  height: 190px;
+  padding-top: 160px;
+  border-radius: 3px;
+  color: white;
+}
+.fb .behind{
+  background: #3b5998;
+}
+.tw .behind{
+  background: #55acee;
+}
+.ig .behind{
+  background: #3f729b;
+}
+
+.fa-facebook{
+  color: #3b5998;
+}
+.fa-twitter{
+  color: #55acee;
+}
+.fa-instagram{
+  color: #3f729b;
+}
+
+@media screen and (max-width: 840px) {
+  body {
+    background-color: cadetblue;
+  }
+  .front .fa {
+    margin: 60px 0 30px 0;
+    font-size: 32px;
+  }
+  .front{
+    width: 100%;
+    height: 160px;
+  }
+  .behind{
+    top: 2px;
+    left: 2px;
+    width: 150px;
+    height: 150px;
+    padding-top: 130px;
+  }
+  .social{
+    width: 600px;
+  }
+  .social > a{
+    margin: 20px;
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: lightsteelblue;
+  }
+  .social{
+    width: 402px;
+  }
+  .social > a {
+    margin: 2px;
+    width: 130px;
+    height: 160px;
+  }
+  .front{
+    box-shadow: 0px 0px 5px darkgray;
+  }
+  .behind {
+    width: 120px;
+    height: 150px;
+  }
+  .fb:hover .front{
+    margin-top: -45px;
+    margin-left: 0px;
+  }
+  .ig:hover .front{
+    margin-top: -45px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .social{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translate(0%, 0%);
+  }
+  .social > a{
+    margin: 0;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 160px;
+  }
+  .front{
+    box-shadow: 0px 0px 5px darkgray;
+  }
+  .behind{
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  } 
+}

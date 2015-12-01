@@ -1,0 +1,189 @@
+/* Designer: Henrique Carvalho; */
+/* Web site: henriquecarvalho.me; */
+
+body{
+	background: #080e24;
+}
+header h1{
+	text-align: center;
+    color: #FFFECE;
+    text-transform: uppercase;
+    text-shadow: 5px 5px #4E4E4A;
+    font-size: 86px;
+}
+span {  
+    position: absolute;
+    z-index: 9999;
+    border-radius: 50%;
+    text-indent: -9999px;
+}
+.absolute-center{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+#solar-system{
+	position: relative;
+    height: 800px;
+    overflow: hidden;
+}
+.planet{
+	border-radius: 50%;
+	/* if you want the background fixed*/
+	/*position: fixed;*/
+}
+.sun{
+	height: 150px;
+    width: 150px;
+    background: #fa1;
+}
+.mercury{
+	width: 250px;
+	height: 250px;
+	border: 1px solid #4a4a4a;
+	-webkit-animation-duration:5s; 
+	-moz-animation-duration:5s;
+}
+.mercury span{
+	top: 33px;
+    left: 20px; 
+    width: 20px;
+    height: 20px;
+    background: #b6bac5;
+}
+.venus{ 
+	width: 350px;
+	height: 350px;
+	border: 1px solid #4a4a4a;
+	-webkit-animation-duration:10s; 
+	-moz-animation-duration:10s;
+}
+.venus span{
+	top: 28px;
+    left: 35px;
+    width: 30px;
+    height: 30px;
+    background: #FDEA7C;
+}
+.earth{ 
+	width: 450px;
+	height: 450px;
+	border: 1px solid #4a4a4a;
+	-webkit-animation-duration:15s; 
+	-moz-animation-duration:15s;
+}
+.earth span{
+	top: 50px;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+    background: #1377FF;
+    /* moon animation */
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-name: moon;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -moz-animation-name: moon;
+}
+.earth span .moon{
+	top: 35px !important;
+    left: 12px !important;
+    width: 10px !important;
+    height: 10px !important;
+    background: #ccc;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.mars{ 
+	width: 550px;
+	height: 550px;
+	border: 1px solid #4a4a4a;
+	-webkit-animation-duration:20s; 
+	-moz-animation-duration:20s;
+}
+.mars span{
+	top: 65px;
+    left: 56px;
+    width: 35px;
+    height: 35px;
+    background: #FF6300; 
+}
+.jupiter{ 
+	width: 650px;
+	height: 650px;
+	border: 1px solid #4a4a4a;
+	-webkit-animation-duration:20s; 
+	-moz-animation-duration:20s;
+}
+.jupiter span{
+	top: 65px;
+    left: 56px;
+    width: 60px;
+    height: 60px;
+    background: #FF6300; 
+}
+.saturn{ 
+	width: 750px;
+	height: 750px;
+	border: 1px solid #4a4a4a;
+	-webkit-animation-duration:20s; 
+	-moz-animation-duration:20s;
+}
+.saturn span{
+	top: 65px;
+    left: 56px;
+    width: 40px;
+    height: 40px;
+    background: #FF6300; 
+}
+.saturn span.ring{
+	top: -9px;
+	left: -9px;
+	width: 45px;
+	height: 45px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: none !important;
+	border: 4px solid #5a4e34;
+}
+
+.animation {
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-name: orbit;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -moz-animation-name: orbit;
+}
+
+.shadow {
+	-webkit-animation:shadow ease-in-out 3s infinite;
+	-moz-animation:shadow ease-in-out 3s infinite;
+	animation:shadow ease-in-out 3s infinite;
+}
+
+/* Chrome, Safari, and Opera */
+@-webkit-keyframes orbit { from { -webkit-transform:rotate(0deg) } to { -webkit-transform:rotate(360deg) } }
+@-webkit-keyframes moon { from { -webkit-transform:rotate(0deg) } to { -webkit-transform:rotate(360deg) } }
+@-webkit-keyframes shadow {
+	0% { -webkit-box-shadow: 0px 0px 55px 7px #ff8705 }
+    50% { -webkit-box-shadow: 0px 0px 100px 10px #ff8705 }
+    100% { -webkit-box-shadow: 0px 0px 55px 7px #ff8705 }
+}
+
+/* Firefox */
+@-moz-keyframes orbit { from { -moz-transform:rotate(0deg) } to { -moz-transform:rotate(360deg) } }
+@-moz-keyframes moon { from { -moz-transform:rotate(0deg) } to { -moz-transform:rotate(360deg) } }
+@-moz-keyframes shadow {
+	0% { -moz-box-shadow: 0px 0px 75px 7px #ff8705 }
+    50% { -moz-box-shadow: 0px 0px 100px 10px #ff8705 }
+    100% { -moz-box-shadow: 0px 0px 75px 7px #ff8705 }
+}

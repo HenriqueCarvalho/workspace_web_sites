@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+    function fibonacci(x, y)
+    {
+      x = (x === undefined) ? 0 : x;
+      y = (y === undefined) ? 1 : y;
+
+      var z = x + y;
+
+      console.log(z+" = "+x+" + "+y);
+
+      x = y;
+      y = z;
+
+      if(z < 20){
+        fibonacci(x,y);
+      }
+    }
+
+    function fib(n){  
+      return n < 2 ? n : fib(n-1)+fib(n-2);
+    }
+
+    function fibArray(size){
+      var array[size] = 0;
+
+      for(i=0; i < size; i++) 
+        array[i] = fib(i);
+        document.write(fib(i) + "<br/>");
+
+      return array;
+    }
+    
+    array = fibArray(10);
+    console.log(array);
+  </script>
+</body>
+</html>
